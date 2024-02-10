@@ -1,0 +1,66 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-class-suffix":"off",
+        "@angular-eslint/no-output-on-prefix": "off",
+        "@angular-eslint/component-class-suffix":"off",
+        "no-dupe-keys":["error"],
+        "no-alert":["error"],
+        "no-debugger":["error"],
+        "no-dupe-args":["error"],
+        "no-console":["warn"],
+        "no-var":["error"],
+        "prefer-const":["error"],
+        "max-lines":["warn",6000],
+        "arrow-spacing":["error"],
+        "no-irregular-whitespace":["warn"],
+        "semi":["warn","always"],
+        "arrow-parens":["warn"],
+        "array-callback-return":["warn"],
+        "indent":["warn"]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility"
+      ],
+      "rules": {
+        "max-lines":["warn",6200]
+      }
+    }
+  ]
+}
