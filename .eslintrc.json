@@ -34,6 +34,15 @@
         "@angular-eslint/directive-class-suffix":"off",
         "@angular-eslint/no-output-on-prefix": "off",
         "@angular-eslint/component-class-suffix":"off",
+        "@angular-eslint/use-lifecycle-interface": "error",
+        "@angular-eslint/no-inputs-metadata-property": "error",
+        "@angular-eslint/no-outputs-metadata-property": "error",
+        "@angular-eslint/pipe-prefix": "error",
+        "@angular-eslint/use-component-selector": "error",
+        "@angular-eslint/prefer-on-push-component-change-detection": "error",
+        "@angular-eslint/no-pipe-impure": "error",
+        "@angular-eslint/use-injectable-provided-in": "error",
+        "@angular-eslint/use-component-view-encapsulation": "error",
         "no-dupe-keys":["error"],
         "no-alert":["error"],
         "no-debugger":["error"],
@@ -47,7 +56,16 @@
         "semi":["warn","always"],
         "arrow-parens":["warn"],
         "array-callback-return":["warn"],
-        "indent":["warn"]
+        "indent":["warn"],
+        "rxjs-angular/prefer-takeuntil": [
+          "error",
+          {
+            "alias": ["untilDestroyed"],
+            "checkComplete": true,
+            "checkDecorators": ["Component"],
+            "checkDestroy": false
+          }
+        ]
       }
     },
     {

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import * as d3 from 'd3';
 
 @Component({
@@ -7,7 +7,8 @@ import * as d3 from 'd3';
     standalone: true,
     imports: [CommonModule],
     templateUrl: './simple-d3-designs.component.html',
-    styleUrl: './simple-d3-designs.component.scss'
+    styleUrl: './simple-d3-designs.component.scss',
+    changeDetection:ChangeDetectionStrategy.OnPush
 })
 export class SimpleD3DesignsComponent implements OnInit {
 
